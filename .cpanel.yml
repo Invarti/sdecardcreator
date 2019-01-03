@@ -2,5 +2,5 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/invartic/public_html/cards
- - index.html $DEPLOYPATH
+ - /bin/cp index.html $DEPLOYPATH
 # - /bin/cp style.css $DEPLOYPATH
