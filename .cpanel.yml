@@ -2,11 +2,11 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/invartic/public_html/cards
- - /bin/cp css/*.* $DEPLOYPATH
- - /bin/cp data/*.* $DEPLOYPATH
- - /bin/cp html/*.* $DEPLOYPATH
- - /bin/cp image/*.* $DEPLOYPATH
- - /bin/cp script/*.* $DEPLOYPATH  
- - /bin/cp template/*.* $DEPLOYPATH
+ - /bin/cp css/*.* $DEPLOYPATH/css/
+ - /bin/cp data/*.* $DEPLOYPATH/data/
+ - /bin/cp html/*.* $DEPLOYPATH/html/
+ - /bin/cp image/*.* $DEPLOYPATH/image/
+ - /bin/cp script/*.* $DEPLOYPATH/script/
+ - /bin/cp template/*.* $DEPLOYPATH/template/
  - /bin/cp index.html $DEPLOYPATH
  - /bin/cp config.json $DEPLOYPATH
