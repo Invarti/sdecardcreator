@@ -4,4 +4,5 @@ deployment:
  - export DEPLOYPATH=/home/invartic/public_html/cards
  - /bin/cp index.html $DEPLOYPATH
  - /bin/cp config.json $DEPLOYPATH
- - /bin/cp -r /css $DEPLOYPATH/css #copy all from sub folder root
+ - /bin/cp /css -R * $DEPLOYPATH/css
+
