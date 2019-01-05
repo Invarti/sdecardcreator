@@ -1,24 +1,11 @@
 # SDE Card Creator
+This app was originally authored by [James Adams](https://github.com/medicationforall) for the purposes of creating cards for the Super Dungeon Explore board-game. The app may be used to create Hero, Monster, Pet, Treasure, Wonder, Explore and Timeout cards. 
 
-You can see a working version of the app at [https://rpg.medicationforall.com/sdecardcreator/](https://rpg.medicationforall.com/sdecardcreator/)
-
-This is an application for creating cards for Super Dungeon Explore.<br />
-Can create Hero, Monster, Pet, Loot, Treasure, Wonder, Explore, and Timeout cards.
+A functional version of this app may be found at [https://cards.invarti.com/](https://cards.invarti.com/). 
 
 
 ## Requirements
-http web server. Apache, python, or IIS will work fine.
-
-
-### Python quick webserver
-Requires python to be installed.
-1. Open a command prompt in the directory where you have sdecardcreator downloaded.
-2. In the command prompt type the following:
-```
-python -m http.server
-```
-3. Open a web browser and in the address bar go to **http://localhost:8000**
-
+A functional web server is required(e.g. Apache, Nginx, Python, or IIS). Clone this repo into a folder accessible on the webserver then open index.html in your preferred web browser. 
 
 
 ## Libraries
@@ -31,8 +18,8 @@ This Application uses:
 * [Game-icons.net](http://game-icons.net/)
 
 
-All of the scripts are being called via cdn.<br />
-If you want to run this application offline you'll need to locally reference those libraries.
+All of the above scripts are being called via a content delivery network (CDN).<br />
+If you want to run this application offline then you will need to download and locally reference each of these libraries.
 
 
 ## License
