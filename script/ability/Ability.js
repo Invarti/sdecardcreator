@@ -38,7 +38,7 @@ function Ability(){
     var cardNode = $('.cardGroup.selected').data('node');
     cardNode.removeAbility(this);
     this.getCardAbilityNodes().remove();
-    this.formNode.remove();
+    $('#ability-'+this.formNode.data("ability")).remove();
     this._checkKeywords();
   };
 

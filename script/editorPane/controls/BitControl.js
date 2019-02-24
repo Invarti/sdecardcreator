@@ -23,18 +23,35 @@
 function BitControl(){
   BaseControl.call(this);
 
-  this.template='<div class="monster bit">'+
-    '<h2><a class="toggleDisplay" href="">monster-bit</a></h2>'+
-    '<div class="controlContent hide">'+
-    '<select name="bit">'+
-      '<option value="eight">8 bit</option>'+
-      '<option value="sixteen">16 bit</option>'+
-      '<option value="start">Start</option>'+
-      '<option value="special">Special</option>'+
-      '<option value="super">Super</option>'+
-    '</select>'+
-    '</div>'+
-  '</div>';
+  this.template=''+
+  '<!-- Accordion card (BitControl.js) -->'+
+  '<div class="card monster bit">'+
+      '<div class="cardOverall card-header" role="tab" id="BitControl">'+
+          '<a class="collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#BitControlBody" aria-expanded="false" aria-controls="BitControlBody">'+
+          '<h5 class="mb-0">Monster Bit Stats <i class="fas fa-angle-down rotate-icon"></i></h5>'+
+          '</a>'+
+      '</div>'+
+      '<!-- Card body -->'+
+      '<div>'+
+          '<div id="BitControlBody" class="controlContent collapse" role="tabpanel" aria-labelledby="BitControl" data-parent="#accordionMain">'+
+              '<div class="card-body">'+
+                  '<div class="monster bit">'+
+                      '<div class="input-group mb-3" controlContent row>'+
+                          '<select name="bit" class="browser-default custom-select" id="inputGroupSelect01">'+
+                              '<option value="" disabled selected>Select bit level</option>'+
+                              '<option value="eight">8 bit</option>'+
+                              '<option value="sixteen">16 bit</option>'+
+                              '<option value="start">Start</option>'+
+                              '<option value="special">Special</option>'+
+                              '<option value="super">Super</option>'+
+                          '</select>'+
+                    '</div>'+
+                '</div>'
+              '</div>'+
+          '</div>'+
+        '</div>'+
+  '</div>'+
+  '<!-- Accordion card end -->';
 
 
   /**

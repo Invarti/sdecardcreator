@@ -22,17 +22,31 @@
  */
 function CardModifierControl(){
   BaseControl.call(this);
-  this.template='<div class="cardModifier">'+
-      '<h2><a class="toggleDisplay" href="">Card Modifier</a></h2>'+
-      '<div class="controlContent hide">'+
-      '<ul>'+
-      '<li><a href="" class="duplicateCardButton cardModifier" data-action="duplicate">Duplicate Card</a></li>'+
-      '<li><a href="" class="moveCardUpButton cardModifier" data-action="up">Move Card Up</a></li>'+
-      '<li><a href="" class="moveCardDownButton cardModifier" data-action="down">Move Card Down</a></li>'+
-      '<li><a href="" class="deletCardButton cardModifier" data-action="delete">Delete Card</a></li>'+
-      '</ul>'+
-      '</div>'+
-    '</div>';
+  this.template=''+
+  '<!-- Accordion card (HeaderControl.js) -->'+
+  '<div class="card">'+
+    '<div class="card-body cardModifier">'+
+            '<div class="controlContent">'+
+                '<div class="mb-3">'+
+                    '<div class="mb-1">'+
+                        '<a href="" class="duplicateCardButton cardModifier" data-action="duplicate"><button class="btn btn-secondary btn-block" type="submit"><i class="fas fa-copy mr-1"></i> Duplicate</button></a>'+
+                    '</div>'+
+                    '<div class="mb-1">'+
+                        '<a href="" class="moveCardUpButton cardModifier" data-action="up"><button class="btn btn-info btn-block" type="submit"><i class="fas fa-chevron-up mr-1"></i> Move Up</button></a>'+
+                    '</div>'+
+                    '<div class="mb-1">'+
+                        '<a href="" class="moveCardDownButton cardModifier" data-action="down"><button class="btn btn-info btn-block" type="submit"><i class="fas fa-chevron-down mr-1"></i> Move Down</button></a>'+
+                    '</div>'+
+                    '<div class="mb-1">'+
+                        '<a href="" class="deletCardButton cardModifier" data-action="delete"><button class="btn btn-danger btn-block" type="submit"><i class="fas fa-trash-alt mr-1"></i> Delete</button></a>'+
+                    '</div>'+
+                '</div>'+
+            '</div>'+
+    '</div>'
+  '</div>'+
+  '<!-- Accordion card end -->';
+  
+;
 
   /**
    * Setup card modifier control.

@@ -29,11 +29,11 @@ function Stat(parent, name, permissions, value){
   '<div class="defense"></div>'+
   '<div class="diceList">'+
   '<div class="dice star">0</div>'+
-  '<div class="dice blue">0</div>'+
-  '<div class="dice red">0</div>'+
-  '<div class="dice green">0</div>'+
-  '<div class="dice orange">0</div>'+
-  '<div class="dice purple">0</div>'+
+  '<div class="dice sde-blue">0</div>'+
+  '<div class="dice sde-red">0</div>'+
+  '<div class="dice sde-green">0</div>'+
+  '<div class="dice sde-orange">0</div>'+
+  '<div class="dice sde-purple">0</div>'+
   '</div>'+
   '</div>';
 
@@ -102,15 +102,15 @@ function Stat(parent, name, permissions, value){
   this.parseValue = function(match,number,type,shield){
     if(number !== undefined && type !== undefined){
       if(type==='b'){
-        $(this.node).find('.blue').css("display","").text(number);
+        $(this.node).find('.sde-blue').css("display","").text(number);
       }else if(type==='r'){
-        $(this.node).find('.red').css("display","").text(number);
+        $(this.node).find('.sde-red').css("display","").text(number);
       }else if(type==='g'){
-        $(this.node).find('.green').css("display","").text(number);
+        $(this.node).find('.sde-green').css("display","").text(number);
       }else if(type==='p'){
-        $(this.node).find('.purple').css("display","").text(number);
+        $(this.node).find('.sde-purple').css("display","").text(number);
       }else if(type==='o'){
-        $(this.node).find('.orange').css("display","").text(number);
+        $(this.node).find('.sde-orange').css("display","").text(number);
       }else if(type==='st'){
         $(this.node).find('.star').css("display","").text(number);
       }else if(type==='sw'){

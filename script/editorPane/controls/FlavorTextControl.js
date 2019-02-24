@@ -22,12 +22,31 @@
  */
 function FlavorTextControl(){
   BaseControl.call(this);
-  this.template='<div class="hero monster loot treasure wonder explore arcadeSolo flavorText">'+
-    '<h2><a class="toggleDisplay" href="">Flavor Text</a></h2>'+
-    '<div class="controlContent hide">'+
-    '<textarea name="flavorText" /></textarea>'+
-    '</div>'+
-  '</div>';
+  this.template=''+
+  '<!-- Accordion card (HeaderControl.js) -->'+
+  '<div class="card hero monster loot treasure wonder explore arcadeSolo flavorText">'+
+      '<div class="cardOverall card-header" role="tab" id="HeaderControl">'+
+          '<a class="collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#HeaderControlBody" aria-expanded="false" aria-controls="HeaderControlBody">'+
+          '<h5 class="mb-0">Card Flavor Text <i class="fas fa-angle-down rotate-icon"></i></h5>'+
+          '</a>'+
+      '</div>'+
+      '<!-- Card body -->'+
+      '<div>'+
+          '<div id="HeaderControlBody" class="controlContent collapse" role="tabpanel" aria-labelledby="HeaderControl" data-parent="#accordionMain">'+
+              '<div class="card-body">'+                
+                '<div class="hero monster loot treasure wonder explore arcadeSolo flavorText">'+
+                  '<div class="input-group md-form">'+
+                    '<textarea name="flavorText" type="text" id="flavorText" class="md-textarea form-control" rows="3"></textarea>'+
+                    '<label for="flavorText">Flavor Text</label>'+
+                  '</div>'+
+              '</div>'+
+          '</div>'+
+      '</div>'+
+  '</div>'+
+  '<!-- Accordion card end -->';
+
+
+
 
   /**
    * Setup flavor text control.

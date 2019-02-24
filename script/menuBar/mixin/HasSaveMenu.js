@@ -21,7 +21,7 @@
  * @mixin
  */
 function HasSaveMenu(){
-  this.saveMenu = $('.save.subMenu');
+  this.saveMenu = $('.container.menuBar');
 
 
   /**
@@ -57,6 +57,7 @@ function HasSaveMenu(){
   this.saveMenu.find('.saveAsImage').click(function(event){
     event.preventDefault();
     var selectedCard = $('.cardGroup.selected');
+    console.log(selectedCard[0]);
     selectedCard.find('.card').css('box-shadow','none');
     var title = selectedCard.data('node').data.title;
     domtoimage.toBlob(selectedCard[0])
@@ -66,6 +67,43 @@ function HasSaveMenu(){
     });
   });
 
+
+
+  /**
+   * Save card front as png
+   */
+  this.saveMenu.find('.saveAsImageFront').click(function(event){
+    event.preventDefault();
+    var selectedCard = $('.cardGroup.selected');
+    var selectedCardFront = selectedCard.find('.front').parentsUntil(".cardDiv");
+    console.log(selectedCard[0]);
+    console.log(selectedCardFront[0]);
+    selectedCard.find('.card').css('box-shadow','none');
+    var title = selectedCard.data('node').data.title;
+    domtoimage.toBlob(selectedCardFront[0])
+    .then(function (blob) {
+        window.saveAs(blob, title+'_front.png');
+        selectedCard.find('.card').css('box-shadow','');
+    });
+  });
+
+  /**
+   * Save card back as png
+   */
+  this.saveMenu.find('.saveAsImageBack').click(function(event){
+    event.preventDefault();
+    var selectedCard = $('.cardGroup.selected');
+    var selectedCardFront = selectedCard.find('.back').parentsUntil(".cardDiv");
+    console.log(selectedCard[0]);
+    console.log(selectedCardFront[0]);
+    selectedCard.find('.card').css('box-shadow','none');
+    var title = selectedCard.data('node').data.title;
+    domtoimage.toBlob(selectedCardFront[0])
+    .then(function (blob) {
+        window.saveAs(blob, title+'_back.png');
+        selectedCard.find('.card').css('box-shadow','');
+    });
+  });
 
   /**
    * Used for the save functionality.

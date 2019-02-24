@@ -1,174 +1,225 @@
+/* SDE Compendium - Site Theme by Topher
+================================================== */
+
+.select-wrapper+label {
+  top: auto;
+}
+
+.card .card-footer {
+  background-color: transparent;
+}
+
+
+.fixed-sn main,
+.hidden-sn main {
+  padding-top: 5.5rem;
+}
+
+
+.sde-card,
+.cardDiv {
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12);
+  border: 0;
+  position: relative;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+}
+
+.keyword.keywordClose:hover > i.keywordCloseIcon { /* when icon is hovered select i */
+  visibility: visible;
+}
+
+i.keywordCloseIcon.fa.fa-times { /* in all other case hide it */
+  visibility: hidden;
+}
+
+/* Bootstrap overrides 
+================================================== */
+
+/* replace bootstrap flex to remove !important  */
+
+.mdb-skin .top-nav-collapse {
+  background-color: rgb(36, 58, 81) !important;
+}
+
+.mdb-skin .navbar {
+  background-color: rgb(36, 58, 81);
+  color: rgb(255, 255, 255);
+}
+
+.navbar {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+  font-weight: 300;
+}
+
+.navbar .breadcrumb .breadcrumb-item a {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.navbar .breadcrumb .breadcrumb-item.active, .navbar .breadcrumb .breadcrumb-item:before {
+  font-size: 1.2rem;
+}
+
+.navbar .fa-bars {
+  font-size: 1.5rem;
+}
+
+.sde-flex {
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 18rem;
+}
+
+.h2-container,
+.white_bg {
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, .90);
+  padding: 6px;
+}
+
+.editorPane .md-form {
+  margin-top: 1rem ;
+  margin-bottom: 1rem;
+}
+
+.md-form label {
+  left:unset
+}
+
+.md-accordion .card .fa-angle-down {
+  float: right;
+}
+
+.md-accordion .card .card-header a:not(.collapsed) .rotate-icon {
+  transform: rotate(180deg);
+}
+
+.md-accordion .card .card-header {
+  border-bottom: 0px;
+  padding: 1rem 1.5rem;
+  background: 0px 0px;
+}
+
+mdb-skin .top-nav-collapse {
+    background-color: rgb(36, 58, 81);
+}
+
+.mdb-skin .btn-secondary {
+  background-color: #0e3d67!important;
+  color: #fff!important;
+}
+
+.small, small {
+  font-size: unset !important;
+  font-weight: unset !important;
+}
+
+.overlay .mask {
+  cursor: pointer;
+}
+
+.editForm  .card {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.35), 0 0px 10px 0 rgba(0,0,0,.12)
+}
+
+/* Card Creator Theme by Medication for All
+================================================== */
+
 @font-face {
   font-family: 'Adelon';
   font-style: normal;
-  src: url(font/AdelonBold.woff2) format('woff2');
+  src: url(../font/adelon/AdelonBold.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'AdelonItalic';
   font-style: normal;
-  src: url(font/AdelonItalic.woff2) format('woff2');
-}
-
-html,body{
-	height:100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-a{
-color:blue;
-text-decoration:none;
-}
-
-a:hover{
-text-decoration:underline;
-}
-
-svg{
-  vertical-align: middle;
-  fill:currentColor;
-}
-
-.inactive svg, svg.inactive{
-  opacity:0.4;
-}
-
-body{
-font-family:arial;
-padding:0px;
-margin:0px;
-background:#c0c0c0;
-}
-
-.page{
-  height:inherit;
-  background:#333;
-  margin-bottom:-5px;
-}
-
-/*pageHeader*/
-.pageHeader{
-  background:#333;
-  color:#fff;
-  padding-left:5px;
-}
-
-.pageHeader h1{
-display:inline-block;
-margin-bottom: 5px;
-margin-top:5px;
-vertical-align:middle;
-}
-
-.pageHeader a{
-background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
-padding:3px;
-border-radius:2px;
-display:inline-block;
-margin: 0px 5px;
-border:1px solid #000;
-/*font-weight:bold;*/
-color:#000;
-}
-
-.pageHeader a:hover{
-border:1px solid #ccc;
-}
-
-.hamburger.menu{
-  padding:0;
-  height:100%;
-  min-width: 250px;
-  z-index:3;
-}
-
-a.hamburger {
-    float: none;
-    margin-right: 10px;
-}
-
-body.menuOpen .hamburger.menu {
-    display: block;
-    position: absolute;
-    top:0px;
-    right: 0;
-    z-index: 3;
-}
-
-.menu .subMenu{
-  display:none;
-  padding:5px;
-}
-
-.menu .subMenu .closeMenuButton{
-  float:right;
-  font-weight: bold;
-}
-
-.menu .subMenu.focus{
-  display:block;
-}
-
-.menu .subMenu .importFile{
-  width:203px;
-}
-
-.menu .subMenu .loadRawTextArea{
-  width: calc(100% - 10px);
-  height:100px;
-}
-
-.hamburger.menu .themeBlock a{
-  display:inline;
-}
-
-.hamburger.menu .fontFamilySelector{
-  width:80px;
-}
-
-.pageContent{
-  height:calc(100% - 50px);
-}
-
-.left, .right{
-display:inline-block;
-vertical-align:top;
+  src: url(../font/adelon/AdelonItalic.woff2) format('woff2');
 }
 
 
-.hero{
-display:block;
-}
-
-span.hero{
-display:inline;
-}
-
-.header a.shareButton{
-display:none;
+.sde-card {
+  line-height: 1.2;
 }
 
 
-
-@media print {
-
-/*.card{
-transform: scale(0.5,0.5);
-}*/
-
-/*@page {
-margin: 0cm;
-}*/
-
-body{
-margin:0;
-}
-.pageHeader{
-display:none;
+.card-inner {
+display: -ms-flexbox;
+display: flex;
+-ms-flex-align: start;
+align-items: flex-start;
+-ms-flex-pack: justify;
+justify-content: space-between;
+padding: 1rem;
+border-bottom: 1px solid #e9ecef;
+border-top-left-radius: .3rem;
+border-top-right-radius: .3rem;
 }
 
-/*.pageFooter{
-display:none;
-}*/
+
+.cardContainer {
+  display: inline-block;
+  height: 100%;
+  width: calc(100% - 295px);
+  overflow: auto;
+  transition: width 0.5s, transform 0.3s ease-out;
 }
+
+.cardContainer .content {
+  font-family: arial;
+
+}
+
+.cardGroup .sde-card {
+  opacity: 0.3;
+}
+
+.cardGroup.selected .sde-card {
+  opacity: 1;
+}
+
+.cardContainer .cardGroup.selected .casde-cardrd {
+  box-shadow: 0 0 3pt 2pt #06ff00;
+}
+
+.cardGroup .hero .keywords .keyword.area,
+.cardGroup .monster .keywords .keyword.area,
+.cardGroup .pet .keywords .keyword.area,
+.cardGroup .arcadeSolo .keywords .keyword.area,
+.cardGroup .loot .keywords .keyword.area,
+.cardGroup .treasure .keywords .keyword.area,
+.cardGroup .wonder .keywords .keyword.area,
+.cardGroup .command .keywords .keyword.area,
+.cardGroup .timeout .keywords .keyword.area {
+  display: none;
+}
+
+ul.ui-autocomplete{
+  background:white;
+  overflow-y:auto;
+  overflow-x:hidden;
+  max-height:210px;
+  width:210px;
+  }
+  
+  @media print {
+    .form{
+      display:none;
+    }
+  }
+  
+  .editorPane a{
+    color:#000;
+  }
+
+  .editorPane .controlContent.hide{
+    display:none;
+  }

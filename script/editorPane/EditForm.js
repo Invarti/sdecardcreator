@@ -21,7 +21,7 @@
  * @class
  */
 function EditForm(){
-  this.template='<div class="editForm form"></div>';
+  this.template='<!-- side menu container start (EditForm.js) --><div class="editForm form"></div><!-- side menu container end -->';
   this.node=undefined;
 
 

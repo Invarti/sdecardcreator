@@ -22,18 +22,42 @@
  */
 function HeaderControl(activeClass){
   BaseControl.call(this);
-  this.template='<div class="header">'+
-  	'<h2><a class="toggleDisplay" href="">Header</a></h2>'+
-    '<div class="controlContent">'+
-  	'<div class="hero monster pet treasure wonder loot explore command arcadeSolo timeout">*Title <input name="title" required maxlength="30" /></div>'+
-  	'<div class="hero monster pet arcadeSolo">Sub-Title <input name="subTitle" maxlength="40" /></div>'+
-
-  	'<div class="hero monster pet arcadeSolo">'+
-  		'Move <input class="number" type="number" name="move" value="6" min="-9" max="99" />'+
-  		'Actions <input class="number" type="number" name="actions" value="3" min="-9" max="99"  />'+
-  	'</div>'+
+  this.template=''+
+  '<!-- Accordion card (HeaderControl.js) -->'+
+  '<div class="card">'+
+      '<div class="cardOverall card-header" role="tab" id="headingOne1">'+
+          '<a class="collapsed" data-toggle="collapse" data-parent="#accordionMain" href="#collapseOne2" aria-expanded="false" aria-controls="collapseOne2">'+
+          '<h5 class="mb-0">Card Header <i class="fas fa-angle-down rotate-icon"></i></h5>'+
+          '</a>'+
+      '</div>'+
+      '<!-- Card body -->'+
+      '<div>'+
+          '<div id="collapseOne2" class="controlContent collapse" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordionMain">'+
+              '<div class="card-body">'+
+                  '<div class="input-group mb-3">'+
+                    '<div class="md-form col-12 hero monster pet treasure wonder loot explore command arcadeSolo timeout">'+
+                      '<input type="text" id="title" name="title" class="form-control text" value="Title" required maxlength="30">'+
+                      '<label for="title" class="active">Title</label>'+
+                      '<small class="form-text text-muted">Max 30 characters</small>'+
+                    '</div>'+
+                    '<div class="md-form col-12 hero monster pet arcadeSolo">'+
+                      '<input type="text" id="subTitle" name="subTitle" class="form-control text" value="Subtitle" maxlength="40">'+
+                      '<label for="subTitle" class="active">SubTitle</label>'+
+                      '<small class="form-text text-muted">Max 40 characters</small>'+
+                    '</div>'+
+                    '<div class="md-form col-6 hero monster pet arcadeSolo">'+
+                      '<input type="number" id="move" name="move" class="form-control text" value="6" min="0" max="99" >'+
+                      '<label for="move" class="active">Move</label>'+
+                    '</div>'+
+                    '<div class="md-form col-6 hero monster pet arcadeSolo">'+
+                      '<input type="number" id="actions" name="actions" class="form-control text" value="3" min="0" max="99" >'+
+                      '<label for="actions" class="active">Actions</label>'+
+                    '</div>'+
+                '</div>'+
+            '</div>'+
+        '</div>'+
   '</div>'+
-  '</div>';
+  '<!-- Accordion card end -->';
 
   /**
    * Setup header control.

@@ -29,7 +29,7 @@ function HasCardTypeControls(){
    */
   this.setCardType=function(type){
     this.data.cardType=type;
-    this.setDisplay(this.node.find('.card'),type);
+    this.setDisplay(this.node.find('.sde-card'),type);
     this.setType(type);
 
     if(this.data.imageSource === undefined || this.data.imageSource === 'default'){
@@ -44,7 +44,7 @@ function HasCardTypeControls(){
    *@todo verify that type is valid.
    */
   this.setType=function(type){
-    this.node.find('.card').removeClass('hero monster pet treasure loot wonder explore arcadeSolo arcadeGang command timeout').addClass(type).css('display','');
+    this.node.find('.sde-card').removeClass('hero monster pet treasure loot wonder explore arcadeSolo arcadeGang command timeout').addClass(type).css('display','');
   };
 
 
@@ -54,7 +54,7 @@ function HasCardTypeControls(){
    */
   this.setScale=function(scale){
     this.data.scale=scale;
-    var cards = this.node.find('.card');
+    var cards = this.node.find('.sde-card');
     cards.css({'transform':'scale('+scale+','+scale+')','transform-origin':'top left'});
     this.node.find('.cardDiv').css({'width':(cards.width()*parseFloat(scale)), 'height':(cards.height()*parseFloat(scale))});
     this.node.css({'width':((cards.width()*parseFloat(scale))*2)+40, 'height':(cards.height()*parseFloat(scale))+20});
@@ -77,8 +77,8 @@ function HasCardTypeControls(){
    */
   this.setRegion=function(region){
     this.data.region=region;
-    var cards = this.node.find('.card');
-    cards.removeClass('red green purple yellow').addClass(region);
+    var cards = this.node.find('.sde-card');
+    cards.removeClass('sde-red sde-green sde-purple sde-yellow').addClass(region);
   };
 
 
@@ -92,13 +92,13 @@ function HasCardTypeControls(){
     var card = this.node;
 
     //sort out the appropriate class name for the divs
-    card.find('.card .item .contentBorder, .card .item .placeHolder').removeClass('ruby sapphire citrine emerald').addClass(orientation);
+    card.find('.sde-card .item .contentBorder, .sde-card .item .placeHolder').removeClass('ruby sapphire citrine emerald').addClass(orientation);
 
     //re-order the divs if necessary
     if(orientation === 'ruby' || orientation === 'citrine'){
-      card.find('.card .item .placeHolder').before(card.find('.card .item .contentBorder'));
+      card.find('.sde-card .item .placeHolder').before(card.find('.sde-card .item .contentBorder'));
     }else if(orientation === 'sapphire' || orientation === 'emerald'){
-      card.find('.card .item .contentBorder').before(card.find('.card .item .placeHolder'));
+      card.find('.sde-card .item .contentBorder').before(card.find('.sde-card .item .placeHolder'));
     }
   };
 

@@ -26,7 +26,7 @@ function HasCardSelect(){
   /**
    * Card selection event.
    */
-  this.node.on('click','.card',$.proxy(function(coreNode,event){
+  this.node.on('click','.sde-card',$.proxy(function(coreNode,event){
     var card = $(this).closest('.cardGroup').data('node');
     coreNode.selectCard(card);
   },null,this));
@@ -127,7 +127,8 @@ function HasCardSelect(){
    *
    */
   this.getSibling=function(selected){
-    if(selected.prev().length > 0){
+    console.log(selected.prev().length);
+    if(selected.prev().length > 1){
       return selected.prev();
     } else if(selected.next().length > 0){
       return selected.next();

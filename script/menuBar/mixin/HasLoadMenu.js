@@ -21,8 +21,8 @@
  * @mixin
  */
 function HasLoadMenu(){
-  this.loadMenu = $('.load.subMenu');
-
+  this.loadMenu = $('#loadModal');
+  this.loadTemplateMenu = $('#loadTemplateMenu');
 
   /**
    * import
@@ -83,7 +83,7 @@ function HasLoadMenu(){
   /**
    * Load template button.
    */
-  this.loadMenu.find('.loadTemplateButton').click($.proxy(function(menu,event){
+  this.loadTemplateMenu.find('.loadTemplateButton').click($.proxy(function(menu,event){
     event.preventDefault();
     var file = $(this).data('file');
 

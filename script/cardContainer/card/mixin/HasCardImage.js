@@ -37,7 +37,7 @@ function HasCardImage(){
   };
 
   //set image draggable.
-  this.node.find('.card .front .character').draggable({containment:'parent'});
+  this.node.find('.sde-card .front .character').draggable({containment:'parent'});
 
 
   /**
@@ -112,7 +112,7 @@ function HasCardImage(){
    *@param {string} v absolute, relative path, or raw image data.
    */
   this.setAvatar=function(v){
-    var character = this.node.find('.card .character');
+    var character = this.node.find('.sde-card .character');
     character.attr('src', v);
   };
 

@@ -21,7 +21,7 @@
  * @class
  */
 function KeywordStore(keywords){
-  Core.call(this);
+  //Core.call(this);
   //DATA
   this.data=undefined;
   this.ordered=undefined;
@@ -165,7 +165,7 @@ function KeywordStore(keywords){
     var keyClass = this.resolveKeyClass(key);
 
     //check to see if the keyword is already added, and if the display flag does not equal false
-    if( data.displayBack !== false && data.displayBack !== 'false'  && $('.cardGroup.selected .card .keywords .'+keyClass).length ===0){
+    if( data.displayBack !== false && data.displayBack !== 'false'  && $('.cardGroup.selected .sde-card .keywords .'+keyClass).length ===0){
       //console.log(key,data);
 
       var description = data.description;
@@ -185,10 +185,14 @@ function KeywordStore(keywords){
 
       var parsedDescription = this.parseDescription(description);
 
-      var backTemplate = '<div class="keyword '+keyClass+'" data-key="'+key+'">'+
-      '<span class="keyword '+keyClass+'"></span>'+
-      '<span class="name">'+key+'</span>:'+
-      '<span class="description">'+parsedDescription+'</span>'+
+      var backTemplate = ''+
+      '<div class="keyword keywordClose '+keyClass+' view overlay" data-key="'+key+'">'+
+        '<span class="keyword '+keyClass+'"></span>'+
+        '<span class="name">'+key+'</span>:'+
+        '<span class="description">'+parsedDescription+'</span>'+
+        '<div class="keywordCloseIcon mask flex-center rgba-red-strong">'+
+          '<p class="white-text"><i class="fa fa-times" aria-hidden="true"></i> Remove</p>'+
+        '</div>'+
       '</div>';
 
       var itemTemplate = '<div class="keyword '+keyClass+'" data-key="'+key+'">'+
@@ -197,9 +201,14 @@ function KeywordStore(keywords){
       '<span class="description">('+parsedDescription+')</span>'+
       '</div>';
 
-      $(".cardGroup.selected .card .back .keywords").append(backTemplate);
+      $(".cardGroup.selected .sde-card .back .keywords").append(backTemplate);
 
-      $(".cardGroup.selected .card .item .keywords").append(itemTemplate);
+      $('.keywordCloseIcon').on('click',function(){
+      //  console.log($(this).parent('div'));
+        $(this).parent('div').remove();
+      
+      });
+      $(".cardGroup.selected .sde-card .item .keywords").append(itemTemplate);
     }
   };
 
@@ -236,17 +245,17 @@ function KeywordStore(keywords){
       var v = p3.toLowerCase();
 
       if(v==='r'){
-        c+="dice red";
+        c+="dice sde-red";
       }else if(v==='b'){
-        c+="dice blue";
+        c+="dice sde-blue";
       }else if(v==='g'){
-        c+="dice green";
+        c+="dice sde-green";
       }else if(v==='o'){
-        c+="dice orange";
+        c+="dice sde-orange";
       }else if(v==='p'){
-        c+="dice purple";
+        c+="dice sde-purple";
       }else if(v==='st'){
-        c+="dice star";
+        c+="dice sde-star";
       }else if(v==='ma'){
         c+="offense magic";
       }else if(v==='mi'){
@@ -434,5 +443,5 @@ function KeywordStore(keywords){
   this._constuctor();
 }
 
-KeywordStore.prototype = new Core();
+// KeywordStore.prototype = new Core();
 KeywordStore.prototype.constructor = KeywordStore;

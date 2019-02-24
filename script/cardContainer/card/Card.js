@@ -43,9 +43,9 @@ function Card(animate,appendAfter){
     "affinity": "citrine"
   };
 
-  this.template='<div class="cardGroup selected">'+
+  this.template='<div class="cardGroup d-flex justify-content-center selected">'+
   	'<div class="cardDiv">'+
-  		'<div class="card hero red">'+
+  		'<div class="sde-card hero sde-red">'+
 
   			'<div class="front">'+
         '<div class="slot ruby hero"></div>'+
@@ -80,9 +80,9 @@ function Card(animate,appendAfter){
   					'</div>'+
 
   					'<div class="abilities">'+
-  						'<div class="monster bit eight"></div>'+
               '<div class="arcadeSolo arcadeGang arcadeMachineLogo"></div>'+
-  					'</div>'+
+            '</div>'+
+            '<div class="monster bit eight"></div>'+
   				'</div>'+
 
   				'<div class="item treasure wonder loot explore command timeout">'+
@@ -109,7 +109,7 @@ function Card(animate,appendAfter){
   	'</div>'+
 
   	'<div class="cardDiv">'+
-  		'<div class="card hero red">'+
+  		'<div class="sde-card hero sde-red">'+
   			'<div class="back">'+
   				'<div class="hero monster pet arcadeSolo header">'+
   					'<div class=""><span class="title">title</span></div>'+
@@ -125,7 +125,6 @@ function Card(animate,appendAfter){
   						'<div><span class="timeout title">title</span></div>'+
   						'<div class="timeout abilities"></div>'+
   						'<div class="monster pet hero arcadeSolo keywords"></div>'+
-
   						'<div class="monster pet hero arcadeSolo flavor">'+
   						'<div class="flavorBorder"></div>'+
   						'<span class=" flavorText"></span>'+
@@ -167,9 +166,9 @@ function Card(animate,appendAfter){
 
     this.setCardType('hero');
 
-    if(animate===true){
-      this.node.animateCss('zoomInLeft');
-    }
+   // if(animate===true){
+    //  this.node.animateCss('zoomInLeft');
+   // }
   };
 
 

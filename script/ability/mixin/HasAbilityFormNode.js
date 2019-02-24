@@ -28,28 +28,56 @@ function HasAbilityFormNode(){
    * @return {string} HTML form template.
    */
   this.getFormTemplate=function(){
-    var template = '<div data-ability="'+Ability.counter+'" class="ability">'+
-    '<a href="" class="closeAbility" title="Close">X</a>'+
-    '<div class="displayInline">Type <select name="costType">'+
-    '<option value="attack">Attack</option>'+
-    '<option value="support">Support</option>'+
-    '<option value="offensePotion">Offense Potion</option>'+
-    '<option value="supportPotion">Support Potion</option>'+
-    '<option value="emergencyPotion">Emergency Potion</option>'+
-    '<option value="special">Special</option>'+
-    '<option class="arcade" disabled>───Arcade───</option>'+
-    '<option class="arcade" value="attack signature">Signature Attack</option>'+
-    '<option class="arcade" value="support signature">Signature Support</option>'+
-    '<option class="arcade" value="attack overcharge">Overcharge Attack</option>'+
-    '<option class="arcade" value="support overcharge">Overcharge Support</option>'+
-    '<option disabled>──────────</option>'+
-    '<option value="definitionOnly">Definition</option>'+
-    '<option value="nameOnly">Name</option>'+
-    '</select></div>'+
-    '<div class="displayInline">Cost <input class="number" name="cost" type="number" value="1" min="0" max="99" /></div>'+
-    '<div>Name <input name="name" value="Ability '+Ability.counter+'" /></div>'+
-    '<div>Definition <textarea name="definition" ></textarea></div>'+
-    '</div>';
+    var template = ''+
+    '<div id="ability-'+Ability.counter+'" data-ability="'+Ability.counter+'" class="ability  ability-'+Ability.counter+'">'+
+ 
+ 
+    '<div class="col-9"><h4>Ability: '+Ability.counter+'</h3></div>'+
+ 
+    '<a href="" class="closeAbility" title="Close"> '+
+    ' <button type="button" class="btn btn-danger btn-sm "><i class="fa fa-times" aria-hidden="true"></i></button></a>'+
+   
+	
+      '<div class="row" >'+
+        '<div class="md-form col-12">'+
+          '<select name="costType" class="displayInline browser-default custom-select">'+
+              '<option value="" disabled selected>Select ability type</option>'+
+              '<option value="attack">Attack</option>'+
+              '<option value="support">Support</option>'+
+              '<option value="offensePotion">Offense Potion</option>'+
+              '<option value="supportPotion">Support Potion</option>'+
+              '<option value="emergencyPotion">Emergency Potion</option>'+
+              '<option value="special">Special</option>'+
+              '<option class="arcade" disabled>───Arcade───</option>'+
+              '<option class="arcade" value="attack signature">Signature Attack</option>'+
+              '<option class="arcade" value="support signature">Signature Support</option>'+
+              '<option class="arcade" value="attack overcharge">Overcharge Attack</option>'+
+              '<option class="arcade" value="support overcharge">Overcharge Support</option>'+
+              '<option disabled>──────────</option>'+
+              '<option value="definitionOnly">Definition</option>'+
+              '<option value="nameOnly">Name</option>'+
+            '</select>'+
+        '</div>'+
+        '<div class="md-form col-12">'+
+        '<input id="name" name="name" class="form-control name" value="Ability '+Ability.counter+'">'+
+        '<label for="name" class="active">Name</label>'+
+        '</div>'+
+
+        '<div class="md-form col-6">'+
+        '<input id="cost" name="cost" class="form-control number" type="number" value="1" min="0" max="99">'+
+        '<label for="cost" class="active">Cost</label>'+
+        '</div>'+
+
+        '<div class="md-form col-12 form-group">'+
+          '<label class="active" for="exampleFormControlTextarea1">Ability Definition</label>'+
+          '<textarea class="form-control rounded-0" name="definition" rows="5"></textarea>'+
+        '</div>'+
+
+   
+ 
+      '</div>'+
+      '</div>';
+
 
     return template;
   };

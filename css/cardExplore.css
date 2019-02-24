@@ -1,11 +1,11 @@
-.card.explore{
+.sde-card.explore{
 width:585px;
 
 background:green;
 background: radial-gradient(ellipse at center,  #b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);
 }
 
-.card.explore .back{
+.sde-card.explore .back{
 margin:0px;
 height:100%;
 background: #000 url('image/explore/exploreBack.png') no-repeat 0px 5px;
@@ -14,33 +14,33 @@ border-radius: 10px;
 }
 
 
-.card.explore .back .content{
+.sde-card.explore .back .content{
 display:none;
 }
 
-.card.explore .item .contentBorder{
+.sde-card.explore .item .contentBorder{
 width:544px;
 height:867px;
 background:url('image/explore/border.png') no-repeat center center;
 }
 
 
-.card.explore .item .content{
+.sde-card.explore .item .content{
 height:752px;
 margin:46px 42px;
 background: white url('image/explore/border.png') no-repeat -22px -22px;
 }
 
-.card.explore .item .character{
+.sde-card.explore .item .character{
 max-height:200px;
 margin:30px 0px;
 }
 
-.card.explore .item .creepNum{
+.sde-card.explore .item .creepNum{
 height:0px;
 }
 
-.card.explore .item .creepSpawn{
+.sde-card.explore .item .creepSpawn{
 	display:none;
 	text-align:center;
 	position:relative;
