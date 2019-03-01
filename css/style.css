@@ -130,6 +130,48 @@ mdb-skin .top-nav-collapse {
   box-shadow: 0 2px 5px 0 rgba(0,0,0,.35), 0 0px 10px 0 rgba(0,0,0,.12)
 }
 
+.btn-floating {
+  box-shadow: 0 5px 11px 0 rgba(0,0,0,.18), 0 4px 15px 0 rgba(0,0,0,.15);
+  width: 47px;
+  height: 47px;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  margin: 10px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  padding: 0;
+  cursor: pointer;
+}
+
+.btn-floating i {
+  font-size: 1.25rem;
+  line-height: 47px;
+  display: inline-block;
+  width: inherit;
+  text-align: center;
+  color: #fff;
+}
+
+.btn-fb {
+  background-color: #3b5998!important;
+  color: #fff!important;
+}
+
+.btn-tw {
+  background-color: #55acee!important;
+  color: #fff!important;
+}
+
+.btn-pin {
+  background-color: #c61118!important;
+  color: #fff!important;
+}
+
 /* Card Creator Theme by Medication for All
 ================================================== */
 
@@ -223,3 +265,9 @@ ul.ui-autocomplete{
   .editorPane .controlContent.hide{
     display:none;
   }
+
+
+.keywordList {
+  height:280px;
+  overflow:auto;
+}

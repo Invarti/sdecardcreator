@@ -45,24 +45,24 @@
 					<div class="p-4">
 						<h4 class="text-white">Load hero card</h4>
 						<ul id="loadTemplateMenu" class="load subMenu templateGroup">
-								<li><a href="template/heroes/Dragon_Blade.json" class="loadTemplateButton" data-file="heroes/Dragon_Blade.json">Dragon
-										Blade</a></li>
-								<li><a href="template/heroes/Ninja_Cola.json" class="loadTemplateButton" data-file="heroes/Ninja_Cola.json">Ninja
-										Cola</a></li>
-								<li><a href="template/heroes/Royal_Warden.json" class="loadTemplateButton" data-file="heroes/Royal_Warden.json">Royal
-										Warden</a></li>
-								<li><a href="template/heroes/Twilight_Knight.json" class="loadTemplateButton" data-file="heroes/Twilight_Knight.json">Twilight
-										Knight</a></li>
-								<li><a href="template/heroes/Wandering_Minstrel.json" class="loadTemplateButton" data-file="heroes/Wandering_Minstrel.json">Wandering
-										Minstrel</a></li>
-							</ul>
+							<li><a href="template/heroes/Dragon_Blade.json" class="loadTemplateButton" data-file="heroes/Dragon_Blade.json">Dragon
+									Blade</a></li>
+							<li><a href="template/heroes/Ninja_Cola.json" class="loadTemplateButton" data-file="heroes/Ninja_Cola.json">Ninja
+									Cola</a></li>
+							<li><a href="template/heroes/Royal_Warden.json" class="loadTemplateButton" data-file="heroes/Royal_Warden.json">Royal
+									Warden</a></li>
+							<li><a href="template/heroes/Twilight_Knight.json" class="loadTemplateButton" data-file="heroes/Twilight_Knight.json">Twilight
+									Knight</a></li>
+							<li><a href="template/heroes/Wandering_Minstrel.json" class="loadTemplateButton" data-file="heroes/Wandering_Minstrel.json">Wandering
+									Minstrel</a></li>
+						</ul>
 					</div>
 				</div>
 			</nav>
 		</div>
 	</header>
 	<main id="main-content" class="page-content container-fluid">
-	
+
 		<!-- Accordion wrapper -->
 		<div class="jumbotron jumbotron-fluid">
 			<div class="container">
@@ -97,7 +97,8 @@
 				<blockquote class="blockquote bq-warning mt-5">
 					<p class="bq-title">2019 Site Update</p>
 					<p>This site is now being maintained by Topher, the author behind the <a href="https://sde.invarti.com/">SDE
-							Compendium site</a>. Please visit the <a href="https://github.com/Invarti/sdecardcreator">Github project</a> page 
+							Compendium site</a>. Please visit the <a href="https://github.com/Invarti/sdecardcreator">Github project</a>
+						page
 						for more information or share your feedback on the <a href="https://discord.gg/gyMp3Zn">SDE Discord
 							Community</a>.</p>
 				</blockquote>
@@ -139,6 +140,107 @@
 			</div>
 		</div>
 
+		<!-- Stats Help Modal -->
+		<div class="modal fade" id="statsHelpModal" tabindex="-1" role="dialog" aria-labelledby="statsHelpModal" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title h1-reponsive blue-text font-bold" id="statsHelpModal">Upload JSON file</h2>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="helpBlock row">
+							<div class="col-6">
+								<h3>Dice Types</h3>
+								<ul>
+									<li>Blue = b</li>
+									<li>Star = st</li>
+									<li>Red = r</li>
+									<li>Green = g</li>
+									<li>Purple = p</li>
+									<li>Orange = o</li>
+								</ul>
+							</div>
+							<div class="col-6">
+								<h3>Modifiers</h3>
+								<ul>
+									<li>Melee: = sw</li>
+									<li>Missile: = mi</li>
+									<li>Magic: = ma</li>
+									<li>Range: = rg</li>
+									<li>Action: = ac</li>
+									<li>Move: = mo</li>
+									<li>Shield: 0sh</li>
+									<li>heart: = he</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Ability Help Modal -->
+		<div class="modal fade" id="abilityHelpModal" tabindex="-1" role="dialog" aria-labelledby="abilityHelpModal"
+		 aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h2 class="modal-title h1-reponsive blue-text font-bold" id="abilityHelpModal">Upload JSON file</h2>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="helpBlock row">
+							<div class="col-6">
+								<h3>Dice Types</h3>
+										<ul>
+									<li>Blue = b</li>
+									<li>Star = st</li>
+									<li>Red = r</li>
+									<li>Green = g</li>
+									<li>Purple = p</li>
+									<li>Orange = o</li>
+								</ul>
+							</div>
+							<div class="col-6">
+								<h3>Modifiers</h3>
+								<ul>
+									<li>Melee: = sw</li>
+									<li>Missile: = mi</li>
+									<li>Magic: = ma</li>
+									<li>Range: = rg</li>
+									<li>Action: = ac</li>
+									<li>Move: = mo</li>
+									<li>Shield: 0sh</li>
+									<li>heart: = he</li>
+								</ul>heart: 1he</li>
+								</ul>
+							</div>
+							<div class="col-6">
+								<h3>Stats</h3>
+								<ul>
+									<li>Strength= STR</li>
+									<li>Armor= ARM</li>
+									<li>Willpower= WILL</li>
+									<li>Dexterity= DEX</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- Template Modal -->
 		<div class="modal fade" id="templateModal" tabindex="-1" role="dialog" aria-labelledby="templateModal" aria-hidden="true">
@@ -368,7 +470,8 @@
 
 		<div class=" ">
 			<div class="row">
-				<div class="editorPane col-12 col-sm-2 accordion md-accordion" id="accordionMain" role="tablist" aria-multiselectable="true"></div>
+				<div class="editorPane col-12 col-sm-2 accordion md-accordion" id="accordionMain" role="tablist"
+				 aria-multiselectable="true"></div>
 				<div class="cardContainer  col-12 col-sm-10">
 
 					<div class="page pageContent">
