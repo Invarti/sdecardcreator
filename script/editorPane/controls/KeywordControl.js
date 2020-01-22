@@ -73,11 +73,9 @@ function KeywordControl(){
                       '<small class="form-text text-muted">Max 40 characters</small>'+
                     	'</div>'+
 											'<div class="mb-3">'+
-													'<a href="" class="keywordSettings" data-action="delete">'+
-															'<button class="btn btn-info btn-block"><i class="fas fa-edit mr-1"></i> Edit Keywords</button>'+
+													'<a href="" class="keywordSettings">'+
+															'<button type="button" class="btn btn-info btn-block" data-toggle="modal" data-target="#keywordEditModal"><i class="fas fa-edit mr-1"></i> Edit Keywords</button>'+
 													'</a>'+
-											'</div>'+
-										
 											'</div>'+
 										'</div>'+
                 '</div>'+

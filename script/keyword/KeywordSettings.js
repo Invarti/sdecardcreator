@@ -17,18 +17,44 @@
  */
 
 function KeywordSettings(store){
-  this.template='	<div class="keyword settings" title="Keyword Editor">'+
-  		'<div class="keywordList">'+
-  			'<ul></ul>'+
-  		'</div>'+
-  		'<div class="keywordForm">'+
-  			'<div>Name <input name="kName" maxlength="50" /></div>'+
-  			'<div>Display Full Description on Card<input type="checkbox" name="kDisplayBack" checked="checked" /></div>'+
-  			'<div>Version <select name="eVersion"><option class="iniatial">1.0</option></select> <a href="" class="addErrata" title="Add New Errata Version">+</a></div>'+
-  			'<div>Description<br /><textarea name="kDescription" maxlength="1000"></textarea></div>'+
-  			'<div class="buttons"><a href="" class="kSave">Update</a></div>'+
-  		'</div>'+
-  	'</div>';
+  this.template=''+    
+    '<!-- Keyword Editor Modal -->'+
+		'<div class="modal fade" id="keywordEditModal" tabindex="-1" role="dialog" aria-labelledby="keywordEditModal" aria-hidden="true">'+
+			'<div class="modal-dialog" role="document">'+
+				'<div class="modal-content">'+
+					'<div class="modal-header">'+
+						'<h2 class="modal-title h1-reponsive blue-text font-bold" id="keywordEditModal">Keyword Editor</h2>'+
+						'<button type="button" class="close" data-dismiss="modal" aria-label="Close">'+
+							'<span aria-hidden="true">&times;</span>'+
+						'</button>'+
+					'</div>'+
+          '<div class="modal-body keywordForm">'+
+            '<div class="keywordList">'+
+              '<ul></ul>'+
+            '</div>'+
+            '<div>'+
+              'Name <input name="kName" maxlength="50" />'+
+            '</div>'+
+            '<div>Display Full Description on Card<input type="checkbox" name="kDisplayBack" checked="checked" />'+
+            '</div>'+
+            '<div>'+
+              'Version <select name="eVersion"><option class="iniatial">1.0</option></select>'+
+              '<a href="" class="addErrata" title="Add New Errata Version"></a>'+
+            '</div>'+
+            '<div>Description<br /><textarea name="kDescription" maxlength="1000"></textarea>'+
+            '</div>'+
+            '<div class="buttons"><a href="" class="kSave">Update</a>'+
+            '</div>'+
+					'</div>'+
+					'<div class="modal-footer">'+
+						'<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>'+
+					'</div>'+
+				'</div>'+
+			'</div>'+
+		'</div>'  
+    
+    
+    ;
 
   this.selectedKey=undefined;
   this.store=undefined;
